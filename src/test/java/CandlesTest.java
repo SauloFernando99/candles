@@ -34,4 +34,11 @@ public class CandlesTest {
 
         assertThrows(IllegalArgumentException.class, () -> new Cake(-5, candlesSizes));
     }
+
+    @Test
+    public void testNegativeCandleSize() {
+        List<Integer> candlesSizes = Arrays.asList(4, 4, -1, 1, 3);
+
+        assertThrows(IllegalArgumentException.class, () -> new Cake(5, candlesSizes));
+    }
 }
