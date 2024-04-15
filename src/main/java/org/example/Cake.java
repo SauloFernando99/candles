@@ -10,6 +10,11 @@ public class Cake {
         if (candlesNumber != candlesSizes.size()) {
             throw new IllegalArgumentException("The number of candle sizes does not correspond to the number of candles");
         }
+        for (int size : candlesSizes) {
+            if (size < 0) {
+                throw new IllegalArgumentException("The candles size cannot be negative");
+            }
+        }
 
         this.candlesNumber = candlesNumber;
         this.candlesSizes = candlesSizes;
