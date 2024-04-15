@@ -11,6 +11,26 @@ public class Cake {
         this.candlesSizes = candlesSizes;
     }
 
+    public int blowCandles() {
+        if (candlesSizes == null || candlesSizes.isEmpty()) {
+            return 0;
+        }
+
+        int maxCount = 0;
+        int maxCandleSize = candlesSizes.get(0);
+
+        for (int size : candlesSizes) {
+            if (size > maxCandleSize) {
+                maxCandleSize = size;
+                maxCount = 1;
+            } else if (size == maxCandleSize) {
+                maxCount++;
+            }
+        }
+
+        return maxCount;
+    }
+
     public int getCandlesNumber() {
         return candlesNumber;
     }
