@@ -2,11 +2,11 @@ package org.example;
 
 import java.util.List;
 
-public class Cake {
+public class CakeCandles {
     private int candlesNumber;
     private List<Integer> candlesSizes;
 
-    public Cake(int candlesNumber, List<Integer> candlesSizes) {
+    public CakeCandles(int candlesNumber, List<Integer> candlesSizes) {
         if (candlesNumber != candlesSizes.size()) {
             throw new IllegalArgumentException("The number of candle sizes does not correspond to the number of candles");
         }
